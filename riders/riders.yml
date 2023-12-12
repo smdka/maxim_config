@@ -9,10 +9,15 @@ spring:
   flyway:
     enabled: true
 management:
+  endpoint:
+    metrics:
+      enabled: true
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: 
+        - refresh
+        - metrics
 logging:
   level:
     org:
